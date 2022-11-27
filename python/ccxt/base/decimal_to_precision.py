@@ -38,7 +38,6 @@ def decimal_to_precision(n, rounding_mode=ROUND, precision=None, counting_mode=D
     if counting_mode == TICK_SIZE:
         assert(isinstance(precision, float) or isinstance(precision, decimal.Decimal) or isinstance(precision, numbers.Integral))
     else:
-        print(precision)
         precision = int(precision) if str(precision)[-2:] == '.0' else precision
         assert(isinstance(precision, numbers.Integral))
     assert rounding_mode in [TRUNCATE, ROUND]
